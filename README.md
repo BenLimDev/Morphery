@@ -1,6 +1,6 @@
-# chatpgtchatbot
+# Morphery
 
-A new Flutter project.
+Morph-learning till Mastery.
 
 ## Getting Started
 
