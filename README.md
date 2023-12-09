@@ -2,15 +2,26 @@
 
 Morph-learning till Mastery.
 
-## Getting Started
+## Introduction
 
-This project is a starting point for a Flutter application.
+In school, students have different study habits—some prepare early, some cram, and some follow
+the regular pace. This creates a challenge for teachers and leaves some students feeling overlooked.
+Morphery is here to change that. It's an app designed for everyone, no matter how you like to learn.
+Whether you're a planner, a last-minute crammer, or somewhere in between, Morphery ensures you
+get the support you need, making learning fair and tailored to your style.
 
-A few resources to get you started if this is your first Flutter project:
+## Problem Statement
+Students in secondary school often adopt varied study habits—some preferring pre-studying, others
+cramming right before exams, and some following the regular pace. This divergence results in a
+challenge for educators who are constrained to cater primarily to students following the standard
+curriculum. Those with different study patterns often lack the necessary attention or resources to
+excel. Is there a way to effectively address the diverse learning speeds and habits of all these
+students?
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Solution:
+Morphery, inspired by its motto "Morph-learning till mastery," addresses this challenge by offering a
+versatile learning platform tailored to diverse study habits. Through its three distinct learning modes
+and four varied learning styles, the app provides a personalized educational experience. By
+empowering students to select their preferred learning approach, Morphery supports educators in
+engaging learners with different study habits, fostering a more inclusive and effective learning
+environment.
