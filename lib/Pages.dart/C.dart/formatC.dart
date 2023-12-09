@@ -66,7 +66,7 @@ class _formatCState extends State<formatC> {
 
   void detectShake(AccelerometerEvent event) {
     double accelerationMagnitude =
-        sqrt(pow(event.x, 3) + pow(event.y, 2) + pow(event.z, 2));
+        sqrt(pow(event.x, 2.5) + pow(event.y, 2) + pow(event.z, 2));
 
     if (accelerationMagnitude > shakeThreshold) {
       // Increment the shake counter
