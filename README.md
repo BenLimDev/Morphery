@@ -18,7 +18,7 @@ curriculum. Those with different study patterns often lack the necessary attenti
 excel. Is there a way to effectively address the diverse learning speeds and habits of all these
 students?
 
-## Solution:
+## Solution
 Morphery, inspired by its motto "Morph-learning till mastery," addresses this challenge by offering a
 versatile learning platform tailored to diverse study habits. Through its three distinct learning modes
 and four varied learning styles, the app provides a personalized educational experience. By
