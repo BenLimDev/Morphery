@@ -154,7 +154,7 @@ class _formatBState extends State<formatB> {
               if (userStyle == 'A')
               ListTile(
                 title: Text("\"$selectedText\" "),
-                subtitle: const Text("Tap for speech-to-text"),
+                subtitle: const Text("Tap for text-to-speech"),
                 titleTextStyle: const TextStyle(fontWeight: FontWeight.w500, fontFamily: 'Signika', color: Color.fromRGBO(32, 44, 89, 1), fontSize: 18,),
                 subtitleTextStyle: const TextStyle(fontWeight: FontWeight.w500, fontFamily: 'Signika', color: Color.fromRGBO(32, 44, 89, 1), fontSize: 18,),
                 //tileColor: const Color.fromRGBO(255, 223, 194, 43),
@@ -167,7 +167,7 @@ class _formatBState extends State<formatB> {
               if (userStyle == 'A')
               ListTile(
                 title: const Text("Read whole page"),
-                subtitle: const Text("Tap for speech-to-text"),
+                subtitle: const Text("Tap for text-to-speech"),
                 titleTextStyle: const TextStyle(fontWeight: FontWeight.w500, fontFamily: 'Signika', color: Color.fromRGBO(32, 44, 89, 1), fontSize: 18,),
                 subtitleTextStyle: const TextStyle(fontWeight: FontWeight.w500, fontFamily: 'Signika', color: Color.fromRGBO(32, 44, 89, 1), fontSize: 18,),
                 //tileColor: const Color.fromRGBO(255, 223, 194, 43),
