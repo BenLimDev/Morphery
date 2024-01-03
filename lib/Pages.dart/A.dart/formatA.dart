@@ -74,7 +74,6 @@ class _formatAState extends State<formatA> {
         shake++;
       });
       print('shake: $shake');
-      
     }
   }
 
@@ -186,11 +185,10 @@ class _formatAState extends State<formatA> {
       );
     },
   );
-
+  } //help button
   
-  
-  }
-    return Scaffold(
+    return WillPopScope(
+    child: Scaffold(
       backgroundColor: const Color.fromRGBO(255, 223, 194, 1),
       appBar: AppBar(
         toolbarHeight: 56, //H1
@@ -464,7 +462,16 @@ class _formatAState extends State<formatA> {
     ),
 
   ], //column children
-),
-    );
+  ),
+  ),
+
+  onWillPop: () async {
+        Navigator.pushNamed(
+        context,
+        '/Menu1',
+        arguments: widget.userStyle,);       
+        return false;
+      },
+  );
   } } //widget
 
