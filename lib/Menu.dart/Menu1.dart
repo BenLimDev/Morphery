@@ -153,7 +153,11 @@ class _ModeWidgetState extends State<Menu1> {
               alignment: Alignment.bottomRight,
               child: ElevatedButton(
                 style: TextButton.styleFrom(
-                  backgroundColor: const Color.fromRGBO(255, 184, 51, 1)),
+                  backgroundColor: 
+                  _selectedOption.isNotEmpty 
+                  ? Color.fromRGBO(255, 205, 0, 1)
+                  : Color.fromRGBO(255, 184, 51, 1),
+                  ),
                 onPressed: () {
                   setState(() {
                     lockedOption = _selectedOption;
@@ -174,12 +178,19 @@ class _ModeWidgetState extends State<Menu1> {
                     }
                   });
                 },
-                child: const Text(
+                child: Text(
                   'Continue',
                   style: TextStyle(
-                  fontSize: 18,
+                  fontWeight: _selectedOption.isNotEmpty
+                  ? FontWeight.w800
+                  : FontWeight.w400,
+                  fontSize: _selectedOption.isNotEmpty
+                  ? 20
+                  : 18,
                   fontFamily: 'Signika',
-                  color: Color.fromRGBO(32, 44, 89, 1),
+                  color: _selectedOption.isNotEmpty
+                  ? Color.fromRGBO(142, 154, 175, 1)
+                  : Color.fromRGBO(32, 44, 89, 1),
                   ),
                 ),
               ),
