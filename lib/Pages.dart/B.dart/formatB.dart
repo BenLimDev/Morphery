@@ -4,6 +4,7 @@ import 'package:sensors_plus/sensors_plus.dart';
 import 'dart:math';
 import 'dart:async';
 
+String set = 'B';
 FlutterTts flutterTts = FlutterTts();
 Future<void> configureTts(double speechRate) async {
 await flutterTts.setLanguage('en-US');
@@ -18,7 +19,7 @@ class formatB extends StatefulWidget {
   final String userStyle;
   final String titleText;
   final String? imagePath1;
-  final String? imagePath2;
+  final String? imagePath2; 
 
   formatB({
     Key? key,
@@ -74,7 +75,6 @@ class _formatBState extends State<formatB> {
         shake++;
       });
       print('shake: $shake');
-      
     }
   }
 
@@ -131,11 +131,12 @@ class _formatBState extends State<formatB> {
             child: Container(
               decoration: BoxDecoration(
               border: Border.all(color: Colors.transparent),
-              borderRadius: BorderRadius.circular(12), // Adjust the value for the desired roundness
-              color: const Color.fromRGBO(255, 205, 0, 1), // Optional: Set the background color
+              borderRadius: BorderRadius.circular(12), 
+              color: const Color.fromRGBO(255, 205, 0, 1), 
             ),
           child: Column(
             children: [
+              
               ListTile(
                 title: Text("\"$selectedText\" "),
                 subtitle: userStyle == 'K'? const Text("Shake for explanation"): const Text("Tap for explanation"),
@@ -186,11 +187,10 @@ class _formatBState extends State<formatB> {
       );
     },
   );
-
+  } //help button
   
-  
-  }
-    return Scaffold(
+    return WillPopScope(
+    child: Scaffold(
       backgroundColor: const Color.fromRGBO(255, 223, 194, 1),
       appBar: AppBar(
         toolbarHeight: 56, //H1
@@ -293,7 +293,7 @@ class _formatBState extends State<formatB> {
                 ),
               ),
             //),
-          if (widget.userStyle == 'V' && widget.imagePath2 != null) // Display second image if available
+          if (widget.userStyle == 'V' && widget.imagePath2 != null) // Display second image if V
             Padding(
               padding: const EdgeInsets.only(
                     left: 16,
@@ -400,8 +400,8 @@ class _formatBState extends State<formatB> {
                       onPressed: () {
                         goIndex = widget.currentIndex - 1;
                         if (goIndex >= 1) {
-                          print('page B$goIndex');
-                          Navigator.pushNamed(context, '/B$goIndex', arguments: widget.userStyle,);
+                          print('page $set$goIndex');
+                          Navigator.pushNamed(context, '/$set$goIndex', arguments: widget.userStyle,);
                         }
                       },
                       child: const Text(
@@ -420,7 +420,7 @@ class _formatBState extends State<formatB> {
               child: Container(
               height: 25, //H
               child: Text(
-                'Page ${widget.currentIndex}',
+                'Page ${widget.currentIndex}/$maxIndex',
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontWeight: FontWeight.w500,
@@ -440,10 +440,10 @@ class _formatBState extends State<formatB> {
                       ),
                       onPressed: () {
                         goIndex = widget.currentIndex + 1;
-                        print('go B$goIndex');
+                        print('go $set$goIndex');
                         Navigator.pushNamed(
                           context,
-                          '/B$goIndex',
+                          '/$set$goIndex',
                           arguments: widget.userStyle,);
                       },
                       child: const Text(
@@ -464,7 +464,16 @@ class _formatBState extends State<formatB> {
     ),
 
   ], //column children
-),
-    );
+  ),
+  ),
+
+  onWillPop: () async {
+      Navigator.pushNamed(
+      context,
+      '/',
+      arguments: widget.userStyle,);       
+      return false;
+    },
+  );
   } } //widget
 

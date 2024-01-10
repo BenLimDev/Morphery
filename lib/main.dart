@@ -4,11 +4,11 @@ import 'package:Morphery/route_generator.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
-runApp(const MyApp());
+runApp(const Morphery());
 }
 
-class MyApp extends StatelessWidget {
-const MyApp({super.key});
+class Morphery extends StatelessWidget {
+const Morphery({super.key});
 
 @override
 Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ Widget build(BuildContext context) {
 	initialRoute: '/',
   onGenerateRoute: (settings) => getPageRoute(settings),
    routes:{
-   '/chat_screen': (context) => const ChatScreen(),
+   '/chat_screen': (context) => ChatScreen(),
    '/': (context) => homeScreen(),
    },
 	debugShowCheckedModeBanner: false,
